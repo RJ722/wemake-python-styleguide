@@ -6,21 +6,17 @@ It is used for e2e tests.
 
 from __future__ import print_function  # noqa: WPS422
 
-from typing import List
-
 import os.path  # noqa: WPS301
 import sys as sys  # noqa: WPS113
-
-from _some import protected  # noqa: WPS436
-from some import _protected  # noqa: WPS450
-
-from .version import get_version  # noqa: WPS300
+from json import loads  # noqa: WPS347
+from typing import List
 
 import import1
 import import2
 import import3
 import import4
-
+from _some import protected  # noqa: WPS436
+from some import _protected  # noqa: WPS450
 from some_name import (  # noqa: WPS235
     name1,
     name2,
@@ -61,6 +57,8 @@ from some_name import (  # noqa: WPS235
     name37,
     name38,
 )
+
+from .version import get_version  # noqa: WPS300
 
 # Raising and ignoring:
 some_int = 1  # type: int
@@ -622,7 +620,6 @@ unhashable = {[]}  # noqa: WPS443
 assert []  # noqa: WPS444
 unhashable = [] * 2  # noqa: WPS435
 
-from json import loads  # noqa: WPS347
 
 some_model = (
     MyModel.objects.filter(...)
